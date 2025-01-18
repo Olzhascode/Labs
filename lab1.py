@@ -1,152 +1,54 @@
-# PYTHON VARIABLES
+# PYTHON DATA TYPES
 
-x = 4       # x is of type int
-x = "Sally" # x is now of type str
-print(x)
-
-# Variable names
-
-    #Legal variable names:
-myvar = "John"
-my_var = "John"
-_my_var = "John"
-myVar = "John"
-MYVAR = "John"
-myvar2 = "John"
-
-    #Illegal variable names:
 """
-2myvar = "John"
-my-var = "John"
-my var = "John
+Text Type:	str
+Numeric Types:	int, float, complex
+Sequence Types:	list, tuple, range
+Mapping Type:	dict
+Set Types:	set, frozenset
+Boolean Type:	bool
+Binary Types:	bytes, bytearray, memoryview
+None Type:	NoneType
 """
 
-    # Many Values to Multiple Variables
-x, y, z = "Orange", "Banana", "Cherry"
-print(x)
-print(y)
-print(z)
-# Result:
- # Orange
- # Banana  
- # Cherry
 
-    # One Value to Multiple Variables
-x = y = z = "Orange"
-print(x)
-print(y)
-print(z)
-# Result:
- # Orange
- # Orange
- # Orange
-
-    # Unpack a Collection
-fruits = ["apple", "banana", "cherry"]
-x, y, z = fruits
-print(x)
-print(y)
-print(z)
-# Result:
- #apple
- #banana
- #cherry
- 
-
-
-    # Output Variables
-x = "Python is awesome"
-print(x)
-# Result:
- # Python is awesome
-
-x = "Python"
-y = "is"
-z = "awesome"
-print(x, y, z)
-# Result:
- # Python is awesome
-
-x = "Python "
-y = "is "
-z = "awesome"
-print(x + y + z)
-# Result:
- # Python is awesome
-
-#Notice the space character after "Python " and "is ", without them the result would be "Pythonisawesome"
-
+# Print the data type of the variable x:
 x = 5
-y = 10
-print(x + y)
+print(type(x))
 # Result:
- # 15
-
-"""
-x = 5
-y = 10
-print(x + y)
-"""
-# Result:
- # TypeError: unsupported operand type(s) for +: 'int' and 'str'
-
-x = 5
-y = "John"
-print(x, y)
-# Result:
- # 5 John
+ # <class 'int'>
 
 
-
-    #Global Variables
-x = "awesome" # global variable
-
-def myfunc():
-  print("Python is " + x)
-
-myfunc()
-# Result:
- #Python is awesome
-
-
-#Create a variable inside a function, with the same name as the global variable
-x = "awesome"
-
-def myfunc():
-  x = "fantastic"
-  print("Python is " + x)
-
-myfunc()
-
-print("Python is " + x)
-# Result:
- #Python is fantastic
- #Python is awesome
- 
-
-#If you use the global keyword, the variable belongs to the global scope:
-
-def myfunc():
-  global x
-  x = "fantastic"
-
-myfunc()
-
-print("Python is " + x)
-# Result:
- # Python is fantastic
+x = "Hello World"	#res: "str"	
+x = 20	#res: "int"	
+x = 20.5	#res: "float"	
+x = 1j	#res: "complex"	
+x = ["apple", "banana", "cherry"]	#res: "list"	
+x = ("apple", "banana", "cherry")	#res: "tuple"	
+x = range(6)	#res: "range"	
+x = {"name" : "John", "age" : 36}	#res: "dict"	
+x = {"apple", "banana", "cherry"}	#res: "set"	
+x = frozenset({"apple", "banana", "cherry"})	#res: "frozenset"	
+x = True	#res: "bool"	
+x = b"Hello"	#res: "bytes"	
+x = bytearray(5)	#res: "bytearray"	
+x = memoryview(bytes(5))	#res: "memoryview"	
+x = None	#res: "NoneType"
 
 
-#To change the value of a global variable inside a function, refer to the variable by using the global keyword:
-x = "awesome"
+# If you want to specify the data type, you can use the following constructor functions:
 
-def myfunc():
-  global x
-  x = "fantastic"
-
-myfunc()
-
-print("Python is " + x)
-# Result:
- # Python is fantastic
-
+x = str("Hello World")	#res: str	
+x = int(20)	#res: int	
+x = float(20.5)	#res: float	
+x = complex(1j)	#res: complex	
+x = list(("apple", "banana", "cherry"))	#res: list	
+x = tuple(("apple", "banana", "cherry"))	#res: tuple	
+x = range(6)	#res: range	
+x = dict(name="John", age=36)	#res: dict	
+x = set(("apple", "banana", "cherry"))	#res: set	
+x = frozenset(("apple", "banana", "cherry"))	#res: frozenset	
+x = bool(5)	#res: bool	
+x = bytes(5)	#res: bytes	
+x = bytearray(5)	#res: bytearray	
+x = memoryview(bytes(5))	#res: memoryview
