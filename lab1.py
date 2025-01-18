@@ -1,54 +1,64 @@
-# PYTHON DATA TYPES
+# PYTHON NUMBERS
 
-"""
-Text Type:	str
-Numeric Types:	int, float, complex
-Sequence Types:	list, tuple, range
-Mapping Type:	dict
-Set Types:	set, frozenset
-Boolean Type:	bool
-Binary Types:	bytes, bytearray, memoryview
-None Type:	NoneType
-"""
+# There are three numeric types in Python:
+# int
+# float
+# complex
 
 
-# Print the data type of the variable x:
-x = 5
-print(type(x))
-# Result:
- # <class 'int'>
+# Example
+x = 1    # int
+y = 2.8  # float
+z = 1j   # complex
+
+# Int, or integer, is a whole number, positive or negative, without decimals, of unlimited length.
+x = 1
+y = 35656222554887711
+z = -3255522
+
+print(type(x)) #res: class, int
+print(type(y)) #res: class, int
+print(type(z)) #res: class, int
 
 
-x = "Hello World"	#res: "str"	
-x = 20	#res: "int"	
-x = 20.5	#res: "float"	
-x = 1j	#res: "complex"	
-x = ["apple", "banana", "cherry"]	#res: "list"	
-x = ("apple", "banana", "cherry")	#res: "tuple"	
-x = range(6)	#res: "range"	
-x = {"name" : "John", "age" : 36}	#res: "dict"	
-x = {"apple", "banana", "cherry"}	#res: "set"	
-x = frozenset({"apple", "banana", "cherry"})	#res: "frozenset"	
-x = True	#res: "bool"	
-x = b"Hello"	#res: "bytes"	
-x = bytearray(5)	#res: "bytearray"	
-x = memoryview(bytes(5))	#res: "memoryview"	
-x = None	#res: "NoneType"
+# Float, or "floating point number" is a number, positive or negative, containing one or more decimals.
+
+x = x = 1.10
+y = 1.0
+z = -35.59
+
+print(type(x)) #res: class, float
+print(type(y)) #res: class, float
+print(type(z)) #res: class, float
 
 
-# If you want to specify the data type, you can use the following constructor functions:
+# Float can also be scientific numbers with an "e" to indicate the power of 10.
 
-x = str("Hello World")	#res: str	
-x = int(20)	#res: int	
-x = float(20.5)	#res: float	
-x = complex(1j)	#res: complex	
-x = list(("apple", "banana", "cherry"))	#res: list	
-x = tuple(("apple", "banana", "cherry"))	#res: tuple	
-x = range(6)	#res: range	
-x = dict(name="John", age=36)	#res: dict	
-x = set(("apple", "banana", "cherry"))	#res: set	
-x = frozenset(("apple", "banana", "cherry"))	#res: frozenset	
-x = bool(5)	#res: bool	
-x = bytes(5)	#res: bytes	
-x = bytearray(5)	#res: bytearray	
-x = memoryview(bytes(5))	#res: memoryview
+x = 35e3
+y = 12E4
+z = -87.7e100
+
+print(type(x)) #res: class, float
+print(type(y)) #res: class, float
+print(type(z)) #res: class, float
+
+
+# Complex numbers are written with a "j" as the imaginary part:
+x = 3+5j
+y = 5j
+z = -5j
+
+print(type(x)) #res: class, complex
+print(type(y)) #res: class, complex
+print(type(z)) #res: class, complex
+
+# Note: You cannot convert complex numbers into another number type.
+
+
+"""Python does not have a random() function to make a random number,
+ but Python has a built-in module called random that can be used to make random numbers:"""
+
+import random
+
+print(random.randrange(1, 10))
+# result random num [1, 10)
